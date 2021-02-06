@@ -935,117 +935,243 @@ footer {
 
 /* Модальне вікно */
 .backdrop {
-  outline: 1px solid var(--totle-text-color);
-
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  /* background: rgba(33, 150, 243, 0.5); */
+
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  z-index: 3;
+  transition: opacity var(--transition);
 }
 .backdrop.is-hidden {
   opacity: 0;
-  /* допомагає при скритому елементі пропустити через себе дії*/
+  visibility: hidden;
   pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
-  min-width: 528px;
+  width: 528px;
   min-height: 581px;
 
   background: var(--primary-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform var(--transition);
 }
 .button-modal {
   position: absolute;
   top: 8px;
   right: 8px;
+  left: auto;
   width: 30px;
   height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background: var(--primary-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
+  transition: color var(--transition);
+}
+
+.button-modal :hover,
+.button-modal :focus {
+  color: #2196f3;
+}
+.modal-icon {
+  fill: currentColor;
 }
 
 .form {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 40px;
+  margin: 40px;
+  cursor: pointer;
+  position: relative;
 }
+
 .form-title {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-
   color: #212121;
-  margin: 0;
-  margin-bottom: 12px;
-  padding: 0;
 }
-.form-filed {
-  margin: 0;
+
+.form-label {
+  display: block;
+  /* position: absolute; */
   margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
 }
-.form-filed label {
+.lable-content {
+  display: block;
+  height: 14px;
   margin-bottom: 4px;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 1.71;
-  /* identical to box height */
+  line-height: 1.17;
 
   letter-spacing: 0.01em;
 
   color: #757575;
 }
-.form-filed input {
-  margin: 0;
-  padding: 14px 0;
-  padding-left: 14px;
+
+.input-container {
+  position: relative;
+}
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  font: inherit;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  outline: transparent;
+  transition: border-color var(--transition);
 }
+.form-input:focus {
+  border-color: #2196f3;
+  cursor: pointer;
+}
+
+.icon-form {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+  background-color: inherit;
+  fill: #000000;
+  transition: fill var(--transition);
+}
+
+.form-input:focus + .icon-form {
+  fill: #2196f3;
+}
+/* 
 .comment {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+  display: block;
 
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 1.71px;
-  /* identical to box height */
-
   letter-spacing: 0.01em;
 
   color: #757575;
-}
-.comment-text {
+} */
+/* .comment-text {
   padding: 12px 16px;
-  margin: 0;
+  margin-bottom: 20px;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.01em;
-
   color: rgba(117, 117, 117, 0.5);
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
 }
+
+.checkbox {
+  position: relative;
+  margin-left: 12px;
+  border: 1px solid black;
+} */
+
+/* .icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid black;
+  border-radius: 2px;
+  margin-right: 7px;
+
+  color: #757575;
+} */
+/* 
+.checkbox-link {
+  color: #2196f3;
+}
+
+.checkbox:checked + .icon {
+  background-color: #2196f3;
+  background-image: url("../images/galochka.svg");
+  background-size: contain;
+  background-origin: border-box;
+  border-color: #2196f3;
+} */
+/* 
+.label {
+  display: inline-block;
+  align-items: center;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+} */
+
+/* .submit-button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  width: 200px;
+  height: 50px;
+  border-style: none;
+
+  margin-left: 164px;
+  margin-top: 30px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.submit-button:focus {
+  background-color: #2196f3;
+} */
