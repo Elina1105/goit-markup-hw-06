@@ -1140,9 +1140,10 @@ footer {
   height: 15px;
 
   background-color: #ffffff;
-  border-color: #212121;
+  border:2px solid #212121;
+  border-radius: 4px;
 
-  background-image: url("../images/border.svg");
+  
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
@@ -1154,13 +1155,17 @@ footer {
 
 .checkbox-input:checked + .checkbox-label::after {
   background-color: #2196f3;
-  background-image: url("../images/chack-box.svg");
-  border-radius: 2px;
+  background-image: url("../images/checkbox.svg");
+  border-color:#2196f3 ;
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
+ 
 }
 
+.checkbox-input:checked ~ .checkbox-label {
+  background-color;
+}
 .checkbox-link {
   color: #2196f3;
   text-decoration: underline;

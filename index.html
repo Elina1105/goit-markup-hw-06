@@ -489,7 +489,7 @@
           <div class="form-label">
             <label class="lable-content">Имя</label>
             <div class="input-container">
-              <input class="form-input" type="text" name="name" />
+              <input class="form-input" type="text" name="name" placeholder="" autocomplete="on"/>
               <svg class="icon-form" width="18" height="18">
                 <use href=".//images/modal.svg#person-black-18dp-1"></use>
               </svg>
@@ -499,7 +499,7 @@
           <div class="form-label">
             <label class="lable-content">Телефон</label>
             <div class="input-container">
-              <input class="form-input" type="text" name="name" />
+              <input class="form-input" type="tel" name="tel" placeholder="" autocomplete="on" />
               <svg class="icon-form" width="18" height="18">
                 <use href=".//images/modal.svg#phone-black-18dp-1"></use>
               </svg>
@@ -509,7 +509,7 @@
           <div class="form-label">
             <label class="lable-content">Почта</label>
             <div class="input-container">
-              <input class="form-input" type="text" name="name" />
+              <input class="form-input" type="email" name="email" placeholder="" autocomplete="on"/>
               <svg class="icon-form" width="18" height="18">
                 <use href=".//images/modal.svg#email-black-18dp-1"></use>
               </svg>
@@ -522,7 +522,7 @@
               class="comment-text"
               name="comment"
               id="comment"
-              rows="8"
+              rows="6"
               placeholder="Введите текст"
             >
             </textarea>
@@ -534,6 +534,7 @@
                 type="checkbox"
                 name="checkbox"
                 value="label"
+                id="checkbox"
               />  
               <label class="checkbox-label" for="checkbox">
               <span class="checkbox-icon">Соглашаюсь с рассылкой и принимаю
