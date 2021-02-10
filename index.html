@@ -405,21 +405,24 @@
     <footer>
       <!-- Логотип -->
       <div class="container footer">
-        <div class="footer-list">
-          <a href="" class="logo-footer">
-            <span class="web">Web</span><span class="studio">Studio</span>
+        <div class="footer__list">
+          <a href="" class="footer__logo">
+            <span class="web">Web</span>
+            <span class="studio">Studio</span>
           </a>
           <!-- Адрес в футері -->
           <address>
-            <span class="adress-footer"
+            <span class="footer__adress"
               >г. Киев, пр-т Леси Украинки, 26<br
             /></span>
-            <a href="" class="footer-link mail">info@example.com</a>
-            <a href="" class="footer-link">+38 099 111 11 11</a>
+            <a href="" class="footer__link mail">info@example.com</a>
+            <a href="" class="footer__link">+38 099 111 11 11</a>
           </address>
         </div>
-        <div>
-          <p class="footer-text">присоединяйтесь</p>
+
+        <!-- Соціальні мережі в футері -->
+        <div class="footer__social">
+          <p class="footer__text">присоединяйтесь</p>
           <ul class="social-networks">
             <li class="social-logo">
               <a href="#" class="social-icon-footer">
@@ -453,25 +456,25 @@
             </li>
           </ul>
         </div>
-        <form class="footer-form">
-          <h2 class="footer-form-text">Подпишитесь на рассылку</h2>
-          <div class="footer-form-filed">
-            <label class="footer-form-label" for="e-mail"></label>
+        <!-- Форма для розсилки -->
+        <div class="footer__form">
+          <h2 class="footer__form-title">Подпишитесь на рассылку</h2>
+          <form class="footer__form-filed">
             <input
-              class="footer-form-input"
+              class="footer__form-input"
               type="text"
               name="e-mail"
               id="e-mail"
               placeholder="E-mail"
             />
-            <button class="footer-submit" type="submit">
-              Подписаться
-              <svg class="button-submit" width="24" height="24">
+            <button class="footer__button" type="submit">
+              <p class="footer__form-text">Подписаться</p>
+              <svg class="footer__form-icon" width="24" height="24">
                 <use href=".//images/submit-defs.svg#icon-icon-send"></use>
               </svg>
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
 

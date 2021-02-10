@@ -508,8 +508,7 @@ link:hover::after {
 .section.client {
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: var(--primary-text-color);
-  margin-bottom: 50px;
+ 
 }
 
 .client-title {
@@ -571,13 +570,15 @@ footer {
 
 .container.footer {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  justify-content: space-between;
 }
-.footer-list {
-  margin-right: 70px;
+.footer__list > .footer__logo{
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
-.logo-footer {
+.footer__logo {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
@@ -586,19 +587,17 @@ footer {
   letter-spacing: 0.03em;
   text-decoration: none;
 
-  display: inline-block;
-  margin-bottom: 20px;
 }
-.footer-list .web {
+.footer__list .web {
   color: var(--accent-color);
 }
-.footer-list .studio {
+.footer__list .studio {
   color: var(--primary-text-color);
 }
 
 /* Адрес  в футері */
 
-.adress-footer {
+.footer__adress {
   color: var(--primary-text-color);
   font-style: normal;
   font-weight: normal;
@@ -609,7 +608,7 @@ footer {
   margin-bottom: 9px;
 }
 
-.footer-link {
+.footer__link {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -623,8 +622,14 @@ footer {
 .mail {
   margin-bottom: 9px;
 }
+  /* Соціальні мережі в футері */
+  .footer__social{
+    margin-left: 63px;
+    width: 206px;
+    height: 80px;
 
-.footer-text {
+  }
+.footer__text {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -656,6 +661,118 @@ footer {
   transition-property: color;
   transition: var(--transition);
 }
+
+
+/* Форма для розсилки */
+
+.footer__form {
+margin-left: 93px;
+}
+
+ .footer__form-title {
+  
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+margin-bottom: 20px;
+margin-top: 0;
+  
+
+} 
+
+.footer__form-filed {
+  display: flex;
+  justify-content: center;
+ 
+}
+.footer__form-input {
+
+padding-left: 16px;
+width: 358px;
+height: 50px;
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ box-sizing: border-box;
+ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+outline: transparent;
+
+  background-color: inherit;
+  color: black;
+ 
+}
+
+
+footer__form-input::placeholder{
+
+font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+.footer__button {
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+  width: 200px;
+  height: 50px;
+  margin-left: 11px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 1.87;
+letter-spacing: 0.06em;
+
+color: #FFFFFF;
+
+  background: #2196f3;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  cursor: pointer;
+
+}
+
+
+
+
+
+
+
+  .footer__form-icon{
+margin-left: 10px;
+
+font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+   text-align: center;
+  letter-spacing: 0.06em;
+color: #ffffff;
+  fill: #ffffff;
+
+  }
+  
+
+
+
 
 /* СТОРІНКА ПОРТФОЛІО */
 
@@ -861,80 +978,7 @@ footer {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-/* ФУТЕР ФОРМА */
 
-.footer-form {
-  margin-left: 93px;
-}
-.footer-form-text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  color: #ffffff;
-  margin: 0;
-  margin-bottom: 10px;
-}
-.footer-form-filed {
-  display: flex;
-}
-.footer-form input {
-  width: 358px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.25;
-  /* identical to box height, or 125% */
-
-  display: inline;
-  align-items: center;
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
-  background: #2f303a;
-  padding-left: 16px;
-}
-
-.footer-submit {
-  padding: 0;
-  margin-left: 12px;
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-style: none;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  /* identical to box height, or 187% */
-
-  text-align: center;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  color: #ffffff;
-
-  width: 200px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.button-submit {
-  margin-left: 10px;
-  width: 24px;
-  height: 24px;
 }
 /* FOOTER PORTFOLIO */
 
@@ -1008,7 +1052,7 @@ footer {
 
 .button-modal :hover,
 .button-modal :focus {
-  color: #2196f3;
+  fill: #2196f3;
 }
 .modal-icon {
   fill: currentColor;
